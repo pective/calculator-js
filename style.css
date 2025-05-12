@@ -16,8 +16,9 @@
     align-items: center;
     border: 2px solid black;
     height: 800px;
-    width: 400px;
+    width: 410px;
     background-color: #13140D;
+    border-radius: 20px;
 }
 
 #display {
@@ -34,20 +35,26 @@
 
 #buttons {
     padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    gap: 10px;
 }
 
 button {
     border-radius: 100px;
     height: 90px;
-    width: 90px;
     font-family: 'Open Sans';
     font-weight: 500;
     font-size: 40px;
     border: 0;
+    
 }
 #zero {
-    width: 180px;
+     grid-column-start: 1;
+    grid-column-end: 3;
 }
+
 #clear {
     background-color: #234E44;
     color: #B6E1D7;
