@@ -6,30 +6,35 @@
     <title>Document</title>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
-        <div id="display"></div>
-        <div id="buttons">
-            <button class="clear" type="button" value="clear">AC</button>
-            <button class="sign" type="button" value="sign">+/-</button>
-            <button class="percent" type="button" value="percent">%</button>
-            <button class="operators" type="button" value="divide">/</button>
-            <button class="operands" type="button" value="7">7</button>
-            <button class="operands" type="button" value="8">8</button>
-            <button class="operands" type="button" value="9">8</button>
-            <button class="operators" type="button" value="times">*</button>
-            <button class="operands" type="button" value="4">4</button>
-            <button class="operands" type="button" value="5">5</button>
-            <button class="operands" type="button" value="6">6</button>
-            <button class="operators" type="button" value="minus">-</button>
-            <button class="operands" type="button" value="1">1</button>
-            <button class="operands" type="button" value="2">2</button>
-            <button class="operands" type="button" value="3">31</button>
-            <button class="operators" type="button" value="plus">+</button>
-            <button class="operands" type="button" value="0">0</button>
-            <button class="decimal" type="button" value=".">.</button>
-            <button class="equals" type="button" value="="></button>
+        <div id="calc-container"></div>
+            <div id="display"></div>
+            <div id="buttons">
+                <button class="clear" type="button" value="clear">AC</button>
+                <button class="sign" type="button" value="sign">+/-</button>
+                <button class="percent" type="button" value="percent">%</button>
+                <button class="operators" type="button" value="divide">/</button>
+                <button class="operands" type="button" value="7">7</button>
+                <button class="operands" type="button" value="8">8</button>
+                <button class="operands" type="button" value="9">8</button>
+                <button class="operators" type="button" value="times">*</button>
+                <button class="operands" type="button" value="4">4</button>
+                <button class="operands" type="button" value="5">5</button>
+                <button class="operands" type="button" value="6">6</button>
+                <button class="operators" type="button" value="minus">-</button>
+                <button class="operands" type="button" value="1">1</button>
+                <button class="operands" type="button" value="2">2</button>
+                <button class="operands" type="button" value="3">31</button>
+                <button class="operators" type="button" value="plus">+</button>
+                <button class="operands" id="zero" type="button" value="0">0</button>
+                <button class="decimal" type="button" value=".">.</button>
+                <button class="equals" type="button" value="=">=</button>
+            </div>
         </div>
     </div>
 </body>

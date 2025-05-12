@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    height: 800px;
+    width: 400px;
+}
+#calc-container {
+    display: grid;
+}
+
+button {
+    border-radius: 100px;
+    height: 90px;
+    width: 90px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 26px;
+}
+#zero {
+    width: 180px;
+}
