@@ -1,11 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #46473b;
 }
 
 #container {
     max-width: fit-content;
     margin-inline: auto;
+    margin-top: 3%;
 }
 #calc-container {
     display: flex;
@@ -48,10 +48,15 @@ button {
     font-weight: 500;
     font-size: 40px;
     border: 0;
-    
+    transition: background-color 0.3s linear 0ms;
+    transition: border-radius 0.3s linear 0ms;
+}
+button:active {
+    border-radius: 16px;
+    background-color: #2A2D1C;
 }
 #zero {
-     grid-column-start: 1;
+    grid-column-start: 1;
     grid-column-end: 3;
 }
 
