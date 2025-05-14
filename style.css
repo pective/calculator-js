@@ -1,5 +1,6 @@
 body {
     background-color: #46473b;
+    font-family: 'Roboto';
 }
 
 #container {
@@ -33,6 +34,7 @@ body {
     border-radius: 20px;
 }
 
+
 #buttons {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -42,19 +44,15 @@ body {
 }
 
 button {
+    position: relative;
+    overflow: hidden;
     border-radius: 100px;
     height: 90px;
-    font-family: 'Open Sans';
     font-weight: 500;
     font-size: 40px;
     border: 0;
-    transition: background-color 0.3s linear 0ms;
-    transition: border-radius 0.3s linear 0ms;
 }
-button:active {
-    border-radius: 16px;
-    background-color: #2A2D1C;
-}
+
 #zero {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -75,4 +73,20 @@ button:active {
 .operands {
     background-color: #1B1C13;
     color: #C6C7B7;
+}
+
+/* RIPPLE ANIMATION*/
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
