@@ -1,3 +1,19 @@
+const OPERATOR_LIST = ['+', '-', '*', '/', '%'];
+
+const display = document.querySelector('#display')
+display.textContent = '';
+const operandButton = document.querySelectorAll('.operands');
+
+Array.from(operandButton).forEach(element => {
+  element.addEventListener("click", function(e) {
+    const val = element.value;
+
+    display.textContent =+ val;
+  })
+});
+
+// RIPPLE EFFECT BELOW
+
 function createRipple(event) {
     const button = event.currentTarget;
   
@@ -9,9 +25,6 @@ function createRipple(event) {
     circle.style.left = `${event.clientX - (button.offsetLeft + radius)}px`;
     circle.style.top = `${event.clientY - (button.offsetTop + radius)}px`;
     circle.classList.add("ripple"); 
-
-    const ripple = button.querySelectorAll("button");
-
     
     button.appendChild(circle);
 }
