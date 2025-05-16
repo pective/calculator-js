@@ -1,6 +1,7 @@
 const display = document.querySelector('#display')
 const operandButtons = document.querySelectorAll('.operands');
 const operatorButtons = document.querySelectorAll('.operators');
+const clearButton = document.querySelector('#clear');
 
 display.textContent = '';
 
@@ -16,10 +17,22 @@ Array.from(operatorButtons).forEach(element => {
   })
 })
 
-const clearButton = document.querySelector('#clear');
 clearButton.addEventListener("click", function() {
   display.textContent = '';
 })
+
+function add(a, b) {
+  return a + b;
+}
+function subtract(a, b) {
+  return a - b;
+}
+function multiply(a, b) {
+  return a * b;
+}
+function divide(a, b) {
+  return a / b;
+}
 
 // RIPPLE EFFECT BELOW
 
