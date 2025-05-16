@@ -2,42 +2,43 @@ let first_operand = '';
 let second_operand = '';
 let current_operator = '';
 
-const display = document.querySelector('#display')
+const currDisplay = document.querySelector('#currDisplay')
+const prevDisplay = document.querySelector("#prevDisplay");
 const operandButtons = document.querySelectorAll('.operands');
 const operatorButtons = document.querySelectorAll('.operators');
 const clearButton = document.querySelector('#clear');
 const equalsButton = document.querySelector('#equals');
 
-display.textContent = '';
+currDisplay.textContent = '';
 
 Array.from(operandButtons).forEach(element => {
   element.addEventListener("click", function() {
-    display.textContent = display.textContent + element.value;
+    currDisplay.textContent = currDisplay.textContent + element.value;
   })
 });
 
 Array.from(operatorButtons).forEach(element => {
   element.addEventListener("click", function() {
     current_operator = element.value;
-    display.textContent = display.textContent + current_operator;
+    // currDisplay.textContent = currDisplay.textContent + current_operator;
+    prevDisplay.textContent = `${currDisplay.textContent} ${current_operator}`;
+    currDisplay.textContent = '';
   })
 })
 
 clearButton.addEventListener("click", function() {
-  display.textContent = '';
-  let first_operand = '';
-  let second_operand = '';
-  let current_operator = '';
+  currDisplay.textContent = '';
+  first_operand = '';
+  second_operand = '';
+  current_operator = '';
 })
 
-function setOperands {
-  first_operand = display.textContent;
-
-
+function setOperands() {
+  first_operand = currDisplay.textContent;
 }
 
 equalsButton.addEventListener("click", function() {
-  display.textContent = evaluate(current_operator, first_operand)
+  currDisplay.textContent = evaluate(current_operator, first_operand)
 })
 
 

@@ -22,8 +22,7 @@ body {
     border-radius: 20px;
 }
 
-#display {
-    display: flex;
+#displays {
     text-align: right;
     justify-content: right;
     align-items: center;
@@ -34,6 +33,14 @@ body {
     border-radius: 20px;
 }
 
+#currDisplay {
+    margin-right: 20px;
+}
+#prevDisplay {
+    margin-right: 20px;
+    font-size: 20px;
+    color: #a5a49a;
+}
 
 #buttons {
     padding-top: 20px;
