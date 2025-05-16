@@ -1,16 +1,27 @@
 const OPERATOR_LIST = ['+', '-', '*', '/', '%'];
 
 const display = document.querySelector('#display')
+const operandButtons = document.querySelectorAll('.operands');
+const operatorButtons = document.querySelectorAll('.operators');
+
 display.textContent = '';
-const operandButton = document.querySelectorAll('.operands');
 
-Array.from(operandButton).forEach(element => {
-  element.addEventListener("click", function(e) {
-    const val = element.value;
-
-    display.textContent = display.textContent + val;
+Array.from(operandButtons).forEach(element => {
+  element.addEventListener("click", function() {
+    display.textContent = display.textContent + element.value;
   })
 });
+
+Array.from(operatorButtons).forEach(element => {
+  element.addEventListener("click", function() {
+    display.textContent = display.textContent + element.value;
+  })
+})
+
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener("click", function() {
+  display.textContent = '';
+})
 
 // RIPPLE EFFECT BELOW
 
