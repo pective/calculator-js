@@ -1,7 +1,12 @@
+let first_operand = '';
+let second_operand = '';
+let current_operator = '';
+
 const display = document.querySelector('#display')
 const operandButtons = document.querySelectorAll('.operands');
 const operatorButtons = document.querySelectorAll('.operators');
 const clearButton = document.querySelector('#clear');
+const equalsButton = document.querySelector('#equals');
 
 display.textContent = '';
 
@@ -13,13 +18,28 @@ Array.from(operandButtons).forEach(element => {
 
 Array.from(operatorButtons).forEach(element => {
   element.addEventListener("click", function() {
-    display.textContent = display.textContent + element.value;
+    current_operator = element.value;
+    display.textContent = display.textContent + current_operator;
   })
 })
 
 clearButton.addEventListener("click", function() {
   display.textContent = '';
+  let first_operand = '';
+  let second_operand = '';
+  let current_operator = '';
 })
+
+function setOperands {
+  first_operand = display.textContent;
+
+
+}
+
+equalsButton.addEventListener("click", function() {
+  display.textContent = evaluate(current_operator, first_operand)
+})
+
 
 function add(a, b) {
   return a + b;
@@ -33,7 +53,24 @@ function multiply(a, b) {
 function divide(a, b) {
   return a / b;
 }
+function evaluate(operator, a, b) {
+  a = Number(a);
+  b = Number(b);
 
+  switch (operator) {
+    case '+':
+      return add(a, b);
+    case '-':
+      return subtract(a, b);
+    case '*':
+      return multiply(a, b);
+    case '/':
+      if(b === 0) return null;
+      else return divide(a, b);
+    default:
+      break;
+  }
+}
 // RIPPLE EFFECT BELOW
 
 function createRipple(event) {
