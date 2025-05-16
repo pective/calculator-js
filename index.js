@@ -19,8 +19,9 @@ Array.from(operandButtons).forEach(element => {
 
 Array.from(operatorButtons).forEach(element => {
   element.addEventListener("click", function() {
+    first_operand = currDisplay.textContent;
     current_operator = element.value;
-    // currDisplay.textContent = currDisplay.textContent + current_operator;
+
     prevDisplay.textContent = `${currDisplay.textContent} ${current_operator}`;
     currDisplay.textContent = '';
   })
@@ -28,17 +29,17 @@ Array.from(operatorButtons).forEach(element => {
 
 clearButton.addEventListener("click", function() {
   currDisplay.textContent = '';
+  prevDisplay.textContent = '';
   first_operand = '';
   second_operand = '';
   current_operator = '';
 })
 
-function setOperands() {
-  first_operand = currDisplay.textContent;
-}
-
 equalsButton.addEventListener("click", function() {
-  currDisplay.textContent = evaluate(current_operator, first_operand)
+  second_operand = currDisplay.textContent;
+
+  prevDisplay.textContent = '';
+  currDisplay.textContent = evaluate(current_operator, first_operand, second_operand);
 })
 
 
@@ -66,7 +67,7 @@ function evaluate(operator, a, b) {
     case '*':
       return multiply(a, b);
     case '/':
-      if(b === 0) return null;
+      if(b === 0) return 'idiot';
       else return divide(a, b);
     default:
       break;
