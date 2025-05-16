@@ -1,5 +1,3 @@
-const OPERATOR_LIST = ['+', '-', '*', '/', '%'];
-
 const display = document.querySelector('#display')
 const operandButtons = document.querySelectorAll('.operands');
 const operatorButtons = document.querySelectorAll('.operators');
