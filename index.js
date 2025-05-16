@@ -8,7 +8,7 @@ Array.from(operandButton).forEach(element => {
   element.addEventListener("click", function(e) {
     const val = element.value;
 
-    display.textContent =+ val;
+    display.textContent = display.textContent + val;
   })
 });
 
