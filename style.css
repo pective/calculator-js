@@ -35,9 +35,11 @@ body {
 
 #currDisplay {
     margin-right: 20px;
+    font-size: 62px;
 }
 #prevDisplay {
-    margin-right: 20px;
+    margin-top: 10px;
+    margin-right: 30px;
     font-size: 20px;
     color: #a5a49a;
 }
